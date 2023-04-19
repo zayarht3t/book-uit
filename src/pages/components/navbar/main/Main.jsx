@@ -13,8 +13,8 @@ useEffect(()=>{
     const fetch = async()=>{
        
         try {
-             const response = await axios.get('http://localhost:8000/api/books');
-             const count = await axios.get('http://localhost:8000/api/books/count');
+             const response = await axios.get('https://book-shelf-server-red.vercel.app/api/books');
+             const count = await axios.get('https://book-shelf-server-red.vercel.app/api/books/count');
              setCounts(count.data);
              setBooks(response.data);
         } catch (error) {

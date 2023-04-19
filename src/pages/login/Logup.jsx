@@ -20,7 +20,7 @@ const Logup = () => {
     const handleClick =async () => {
         if(password === confirmPassword){
             try {
-                const response = await axios.post('http://localhost:8000/api/auth/register', body,{headers: {'Content-Type': 'application/json'},withCredentials: true})
+                const response = await axios.post('https://book-shelf-server-red.vercel.app/api/auth/register', body,{headers: {'Content-Type': 'application/json'},withCredentials: true})
                 console.log(response.data);
                 navigate('/register');
             } catch (error) {

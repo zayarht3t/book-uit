@@ -14,7 +14,7 @@ const Favourite = () => {
     useEffect(()=>{
         const fetchData = async ()=>{
          try {
-             const response = await axios.get(`http://localhost:8000/api/users/getFavourites/${user._id}`,{withCredentials: true})
+             const response = await axios.get(`https://book-shelf-server-red.vercel.app/api/users/getFavourites/${user._id}`,{withCredentials: true})
              setBooks(response.data);
 
          } catch (error) {

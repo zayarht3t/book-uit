@@ -18,7 +18,7 @@ const Signup = () => {
     const handleClick =async () => {
         dispatch({type: "LOGIN_START"});
         try {
-            const response = await axios.post('http://localhost:8000/api/auth/login',body,{headers: {'Content-Type': 'application/json'},withCredentials: true});
+            const response = await axios.post('https://book-shelf-server-red.vercel.app/api/auth/login',body,{headers: {'Content-Type': 'application/json'},withCredentials: true});
             console.log(response.data);
             dispatch({type: "LOGIN_SUCCESS", payload: response.data});
             navigate('/');

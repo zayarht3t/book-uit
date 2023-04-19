@@ -11,7 +11,7 @@ import axios from 'axios';
 const Card = ({book}) => {
     const {user} = useContext(AuthContext);
     const handleClick = async (type)=>{
-       const response = await axios.put(`http://localhost:8000/api/users/addToFavourites/${book?._id}`,{headers: "Content-Type: application/json"},{withCredentials: true})
+       const response = await axios.put(`https://book-shelf-server-red.vercel.app/api/users/addToFavourites/${book?._id}`,{headers: "Content-Type: application/json"},{withCredentials: true})
        console.log(response.data);
     }
   return (

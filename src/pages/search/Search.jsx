@@ -18,7 +18,7 @@ const Search = () => {
     useEffect(()=>{
        const fetchData = async ()=>{
         try {
-            const response = await axios.get('http://localhost:8000/api/books/popular?page=1')
+            const response = await axios.get('https://book-shelf-server-red.vercel.app/api/books/popular?page=1')
             setCount(response.data.count);
             setBooks(response.data.books);
 
@@ -34,7 +34,7 @@ const Search = () => {
 
     const handleClick =async (num)=>{
         try {
-            const response = await axios.get(`http://localhost:8000/api/books/popular?page=${num}`)
+            const response = await axios.get(`https://book-shelf-server-red.vercel.app/api/books/popular?page=${num}`)
             setCount(response.data.count);
             setBooks(response.data.books);
 
@@ -46,7 +46,7 @@ const Search = () => {
 
     const searchClick =async ()=>{
         try {
-            const response = await axios.get(`http://localhost:8000/api/books/name?name=${text}`);
+            const response = await axios.get(`https://book-shelf-server-red.vercel.app/api/books/name?name=${text}`);
             console.log(response.data)
             setCount(response.data.count);
             setBooks(response.data);
